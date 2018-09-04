@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41F3941290D1D4B3DFAAF6BF /* Pods_DocLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800D839D597AC9DBC5E26086 /* Pods_DocLog.framework */; };
 		FFA3BB7F213E5D60008A4BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3BB7E213E5D60008A4BEF /* AppDelegate.swift */; };
 		FFA3BB81213E5D64008A4BEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3BB80213E5D64008A4BEF /* ViewController.swift */; };
 		FFA3BB84213E5D68008A4BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA3BB82213E5D68008A4BEF /* Main.storyboard */; };
@@ -16,9 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		800D839D597AC9DBC5E26086 /* Pods_DocLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DocLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C02EF73E9BA18C8021895E66 /* Pods-DocLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocLog.release.xcconfig"; path = "Pods/Target Support Files/Pods-DocLog/Pods-DocLog.release.xcconfig"; sourceTree = "<group>"; };
-		C216D833291DE624017520D8 /* Pods-DocLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocLog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DocLog/Pods-DocLog.debug.xcconfig"; sourceTree = "<group>"; };
 		FFA3BB7B213E5D5F008A4BEF /* DocLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA3BB7E213E5D60008A4BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA3BB80213E5D64008A4BEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,37 +29,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41F3941290D1D4B3DFAAF6BF /* Pods_DocLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D12FD4DDF0BAAF137F079C6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				800D839D597AC9DBC5E26086 /* Pods_DocLog.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		41595BF59EE7F3535B8061D3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C216D833291DE624017520D8 /* Pods-DocLog.debug.xcconfig */,
-				C02EF73E9BA18C8021895E66 /* Pods-DocLog.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		FFA3BB72213E5D5C008A4BEF = {
 			isa = PBXGroup;
 			children = (
 				FFA3BB7D213E5D5F008A4BEF /* DocLog */,
 				FFA3BB7C213E5D5F008A4BEF /* Products */,
-				41595BF59EE7F3535B8061D3 /* Pods */,
-				2D12FD4DDF0BAAF137F079C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,12 +71,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFA3BB8D213E5E1A008A4BEF /* Build configuration list for PBXNativeTarget "DocLog" */;
 			buildPhases = (
-				D75F427C8276809D2C6796CC /* [CP] Check Pods Manifest.lock */,
-				FFA3BB90213E8646008A4BEF /* Generate Apollo GraphQL API */,
 				FFA3BB77213E5D5E008A4BEF /* Sources */,
 				FFA3BB78213E5D5E008A4BEF /* Frameworks */,
 				FFA3BB79213E5D5E008A4BEF /* Resources */,
-				B137A7D38D616684CF7B7D2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,59 +129,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B137A7D38D616684CF7B7D2F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DocLog/Pods-DocLog-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DocLog/Pods-DocLog-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D75F427C8276809D2C6796CC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DocLog-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FFA3BB90213E8646008A4BEF /* Generate Apollo GraphQL API */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Apollo GraphQL API";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFA3BB77213E5D5E008A4BEF /* Sources */ = {
@@ -293,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -347,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -358,7 +278,6 @@
 		};
 		FFA3BB8E213E5E1A008A4BEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C216D833291DE624017520D8 /* Pods-DocLog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -380,7 +299,6 @@
 		};
 		FFA3BB8F213E5E1A008A4BEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C02EF73E9BA18C8021895E66 /* Pods-DocLog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
