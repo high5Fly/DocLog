@@ -1,10 +1,14 @@
 # The following types define the data model of the example service
 # based on which the GraphQL API is generated
 
-type User @model {
+type Doctor @model {
   id: ID! @isUnique
   name: String
   dateOfBirth: DateTime
+  jobTitle: String
+  description: String
+  workPlace: String
+  address: String
 
   # Uncomment below - you can declare relations between models like this
 

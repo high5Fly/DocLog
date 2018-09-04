@@ -1,1 +1,3 @@
-{}
+targets:
+  DocLogGQL: shared-eu-west-1/cjlnfiedt268w0107w5cfuom1
+  default: DocLogGQL
