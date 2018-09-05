@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF2F31FC213FBA02008ED704 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = FF2F31FB213FBA02008ED704 /* schema.json */; };
+		FF8D2644213EBD710079DF0D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8D2643213EBD710079DF0D /* SQLite.framework */; };
 		FFA3BB7F213E5D60008A4BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3BB7E213E5D60008A4BEF /* AppDelegate.swift */; };
 		FFA3BB81213E5D64008A4BEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3BB80213E5D64008A4BEF /* ViewController.swift */; };
 		FFA3BB84213E5D68008A4BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA3BB82213E5D68008A4BEF /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF2F31FB213FBA02008ED704 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = ../../schema.json; sourceTree = "<group>"; };
+		FF8D2643213EBD710079DF0D /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		FFA3BB7B213E5D5F008A4BEF /* DocLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA3BB7E213E5D60008A4BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA3BB80213E5D64008A4BEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8D2644213EBD710079DF0D /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF8D2642213EBD710079DF0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF8D2643213EBD710079DF0D /* SQLite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FFA3BB72213E5D5C008A4BEF = {
 			isa = PBXGroup;
 			children = (
 				FFA3BB7D213E5D5F008A4BEF /* DocLog */,
 				FFA3BB7C213E5D5F008A4BEF /* Products */,
+				FF8D2642213EBD710079DF0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +68,7 @@
 		FFA3BB7D213E5D5F008A4BEF /* DocLog */ = {
 			isa = PBXGroup;
 			children = (
+				FF2F31FB213FBA02008ED704 /* schema.json */,
 				FFA3BB7E213E5D60008A4BEF /* AppDelegate.swift */,
 				FFA3BB80213E5D64008A4BEF /* ViewController.swift */,
 				FFA3BB82213E5D68008A4BEF /* Main.storyboard */,
@@ -71,9 +86,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFA3BB8D213E5E1A008A4BEF /* Build configuration list for PBXNativeTarget "DocLog" */;
 			buildPhases = (
+				FF8D2646213EBE1B0079DF0D /* Generate Apollo GraphQL API */,
 				FFA3BB77213E5D5E008A4BEF /* Sources */,
 				FFA3BB78213E5D5E008A4BEF /* Frameworks */,
 				FFA3BB79213E5D5E008A4BEF /* Resources */,
+				FF8D2645213EBDAE0079DF0D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -122,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2F31FC213FBA02008ED704 /* schema.json in Resources */,
 				FFA3BB89213E5E1A008A4BEF /* LaunchScreen.storyboard in Resources */,
 				FFA3BB86213E5E1A008A4BEF /* Assets.xcassets in Resources */,
 				FFA3BB84213E5D68008A4BEF /* Main.storyboard in Resources */,
@@ -129,6 +147,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FF8D2645213EBDAE0079DF0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				" $(SRCROOT)/Carthage/Build/iOS/Apollo.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		FF8D2646213EBE1B0079DF0D /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFA3BB77213E5D5E008A4BEF /* Sources */ = {
@@ -283,6 +332,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83DU9LYVZE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DocLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +357,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83DU9LYVZE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DocLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
