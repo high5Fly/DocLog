@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41F3941290D1D4B3DFAAF6BF /* Pods_DocLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 800D839D597AC9DBC5E26086 /* Pods_DocLog.framework */; };
+		FF2F31FE213FC861008ED704 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = FF2F31FD213FC860008ED704 /* schema.json */; };
 		FFA3BB7F213E5D60008A4BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3BB7E213E5D60008A4BEF /* AppDelegate.swift */; };
 		FFA3BB81213E5D64008A4BEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3BB80213E5D64008A4BEF /* ViewController.swift */; };
 		FFA3BB84213E5D68008A4BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA3BB82213E5D68008A4BEF /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		800D839D597AC9DBC5E26086 /* Pods_DocLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DocLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02EF73E9BA18C8021895E66 /* Pods-DocLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocLog.release.xcconfig"; path = "Pods/Target Support Files/Pods-DocLog/Pods-DocLog.release.xcconfig"; sourceTree = "<group>"; };
 		C216D833291DE624017520D8 /* Pods-DocLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocLog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DocLog/Pods-DocLog.debug.xcconfig"; sourceTree = "<group>"; };
+		FF2F31FD213FC860008ED704 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		FFA3BB7B213E5D5F008A4BEF /* DocLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA3BB7E213E5D60008A4BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA3BB80213E5D64008A4BEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FFA3BB7E213E5D60008A4BEF /* AppDelegate.swift */,
+				FF2F31FD213FC860008ED704 /* schema.json */,
 				FFA3BB80213E5D64008A4BEF /* ViewController.swift */,
 				FFA3BB82213E5D68008A4BEF /* Main.storyboard */,
 				FFA3BB85213E5E1A008A4BEF /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2F31FE213FC861008ED704 /* schema.json in Resources */,
 				FFA3BB89213E5E1A008A4BEF /* LaunchScreen.storyboard in Resources */,
 				FFA3BB86213E5E1A008A4BEF /* Assets.xcassets in Resources */,
 				FFA3BB84213E5D68008A4BEF /* Main.storyboard in Resources */,

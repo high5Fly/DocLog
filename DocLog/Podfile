@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
 target 'DocLog' do
   use_frameworks!
-  pod 'Apollo'
+  pod 'Apollo' , '0.7'
 end
