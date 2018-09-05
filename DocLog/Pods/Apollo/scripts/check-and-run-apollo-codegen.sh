@@ -62,4 +62,4 @@ fi
 # Print commands before executing them (useful for troubleshooting)
 set -x
 
-exec apollo-codegen "$@"
+exec apollo "$@"
